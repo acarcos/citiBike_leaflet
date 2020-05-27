@@ -1,0 +1,16 @@
+html,
+body,
+#map-id {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.legend {
+  background-color: white;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 10px;
+}
+
+
+
