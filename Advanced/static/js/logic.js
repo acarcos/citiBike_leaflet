@@ -89,7 +89,7 @@ var icons = {
         shape: "square"
     }),
     NORMAL: L.ExtraMarkers.icon({
-        icon: "ion-android-bicycle",
+        icon: "bicycle-outline",
         iconColor: "white",
         markerColor: "green",
         shape: "star"
