@@ -63,6 +63,8 @@ info.addTo(map);
 
 // Initialize an object containing icons for each layer group
 // These are personalize icons located on css and js
+//L.MakiMarkers.accessToken = "pk.eyJ1IjoiY2hhcmNvcyIsImEiOiJja2FuNXE5YXUxbGRyMnFuc3c5dzRkamkxIn0.2IEQgoBPJmtVyxaXuGxBAQ";
+
 var icons = {
     COMING_SOON: L.ExtraMarkers.icon({
         icon: "ion-settings",
@@ -89,12 +91,14 @@ var icons = {
         shape: "square"
     }),
     NORMAL: L.ExtraMarkers.icon({
-        icon: "bicycle-outline",
+        icon: "ion-android-bicycle",
         iconColor: "white",
         markerColor: "green",
-        shape: "star"
+        shape: "square"
     })
 };
+
+
 
 // Now, we fill the previous layers and markers with data :)
 // API call to the Citi Bike Station Information locations
@@ -166,6 +170,16 @@ d3.json("https://gbfs.citibikenyc.com/gbfs/en/station_information.json", functio
 
         // Call the updateLegend function
         updateLegend(updateAt, stationCount);
+
+        var redMarker = L.VectorMarkers.icon({
+            icon: 'bus',
+            prefix: '',
+            extraClasses: 'maki-icon',
+            markerColor: 'red'
+          });
+        
+          L.marker([48.15491,11.54183], {icon: redMarker}).addTo(map);
+        
 
     });
 });
